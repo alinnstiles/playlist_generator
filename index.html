@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link href="style.css" type="text/css" rel="stylesheet">
+    <title>Playlist Generator</title>
+</head>
+<body>
+    <h1 id="playlistGenerator">Playlist Generator</h1>
+
+   
+    <form id="playlistForm">
+        <label for="mood">Mood:</label>
+        <select id="mood" name="mood">
+            <option value=""></option>
+            <option value="moody">Moody</option>
+            <option value="energetic">Energetic</option>
+        </select>
+        
+        <label for="timePeriod">Time Period:</label>
+        <select id="timePeriod" name="timePeriod">
+            <option value=""></option>
+            <option value="goldenages">Golden Ages</option>
+            <option value="y2k">Y2K</option>
+        </select>
+        
+        <label for="genre">Genre:</label>
+        <select id="genre" name="genre">
+            <option value=""></option>
+            <option value="rock">Rock</option>
+            <option value="pop">Pop</option>
+            <option value="hiphop">Hip Hop</option>
+        </select>
+        
+        <button type="submit" id="generatePlaylist">Generate Playlist</button>
+        <button type="button" id="clearForm">Clear Form</button>
+    </form>
+    
+    <!-- Container for displaying the Spotify playlist -->
+    <div id="playlistContainer"></div>
+
+
+    <!-- Load the Playlist class definition first -->
+    <script src="playlist.js"></script>
+    <!-- Then load the script that uses the Playlist class -->
+    <script src="index.js"></script>
+</body>
+</html>

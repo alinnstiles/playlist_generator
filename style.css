@@ -1,0 +1,95 @@
+/* Define CSS variables for colors */
+:root {
+    --primary-background: #ff9966;
+    --secondary-background: #ff5e62;
+    --text-color: #fff;
+    --button-background: #333;
+    --button-hover-background: #444;
+    --link-color: #ff5e62;
+    --link-hover-color: #ff9966;
+}
+
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(to right, var(--primary-background), var(--secondary-background));
+    color: var(--text-color);
+    display: flex;
+    flex-direction: column; /* Stack children vertically */
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Ensures the body takes up the full viewport height */
+    margin: 0;
+}
+
+
+
+/* Form Container */
+#playlist-form {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+    width: 300px;
+    max-width: 100%;
+    display: flex; /* Add this to use flexbox for alignment */
+    flex-direction: column; /* Stack children vertically */
+    align-items: flex-start; /* Align children to the left */
+}
+
+/* Form Elements */
+#playlist-form label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+#playlist-form select,
+#playlist-form button {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: var(--text-color);
+    color: var(--button-background);
+    font-size: 16px;
+}
+
+/* Button Styles */
+#playlist-form button[type="submit"] {
+    background-color: var(--button-background);
+    color: var(--text-color);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#playlist-form button[type="submit"]:hover {
+    background-color: var(--link-hover-color);
+}
+
+#playlist-form button[type="button"] {
+    background-color: var(--button-background);
+    color: var(--text-color);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#playlist-form button[type="button"]:hover {
+    background-color: var(--button-hover-background);
+}
+
+/* Playlist Display */
+#playlist-display {
+    margin-top: 20px;
+    text-align: center;
+}
+
+#playlist-display a {
+    color: var(--link-color);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+#playlist-display a:hover {
+    color: var(--link-hover-color);
+}
